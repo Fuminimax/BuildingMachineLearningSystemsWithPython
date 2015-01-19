@@ -69,6 +69,7 @@ f50 = sp.poly1d(fp50)
 plt.plot(fx, f50(fx), linewidth=4)
 
 plt.ylim(0,10000)
+
 # 左上に凡例を表示する
 plt.legend(["d=%i" % f1.order, "d=%i" % f2.order, "d=%i" % f3.order, "d=%i" % f10.order, "d=%i" % f50.order], loc="upper left")
 
