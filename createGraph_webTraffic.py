@@ -34,7 +34,8 @@ plt.xticks([w*7*24 for w in range(10)], ['week %i'%w for w in range(10)])
 plt.autoscale(tight=True)
 
 # xの値の最後までを1000分割してf1(x)へのxの引数とするために設定する
-fx = sp.linspace(0, x[-1], 1000)
+#fx = sp.linspace(0, x[-1], 1000)
+fx = sp.linspace(0, 6*7*24, 1000)
 
 # 1次関数として近似関数のモデルを得る
 # fp1にモデル係数が格納される f(x) = ax + bのa, bに当たる部分が格納される。
@@ -67,7 +68,7 @@ fp50 = sp.polyfit(x, y, 50)
 f50 = sp.poly1d(fp50)
 plt.plot(fx, f50(fx), linewidth=4)
 
-
+plt.ylim(0,10000)
 # 左上に凡例を表示する
 plt.legend(["d=%i" % f1.order, "d=%i" % f2.order, "d=%i" % f3.order, "d=%i" % f10.order, "d=%i" % f50.order], loc="upper left")
 
