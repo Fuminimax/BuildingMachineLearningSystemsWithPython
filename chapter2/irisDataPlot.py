@@ -24,5 +24,7 @@ for t,marker,c in zip(xrange(3), ">ox", "rgb"):
                 features[target == t,1],
                 marker = marker,
                 c = c)
-    
+
+print labels
+plt.legend(labels, loc="upper left")
 plt.show()
